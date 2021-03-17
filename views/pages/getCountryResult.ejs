@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+
+  <link rel="stylesheet" href="./style.css">
+
   <title>getCountryResult</title>
 </head>
 <body>
@@ -12,14 +16,16 @@
     <a href="/MyRecords">MyRecords</a>
     <a href="/AllCountries">All Countries</a>
   </header>
+  <main>
   <% data.forEach(element => { %>
-    <div>
+    <div class="card" style="max-height: 70px;">
       <h1>Country: <%= element.Country %></h1>
       <h1>Cases: <%= element.Cases %></h1>
       <h1>Date: <%= element.Date %></h1>
     </div>
-    <hr>
   <% }); %>
-  
+</main>
+  <footer> Farhan Ayyash</footer>
+
 </body>
 </html>

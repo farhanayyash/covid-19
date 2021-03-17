@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+
   <link rel="stylesheet" href="./style.css">
   <title>Covid</title>
 </head>
@@ -14,15 +16,20 @@
     <a href="/MyRecords">MyRecords</a>
     <a href="/AllCountries">All Countries</a>
   </header>
-  <div>TotalConfirmed: <%= data.TotalConfirmed %></div>
+  <main>
+    <div id="main">
+    <div>TotalConfirmed: <%= data.TotalConfirmed %></div>
   <div>TotalDeaths: <%= data.TotalDeaths %></div>
   <div>TotalRecovered <%= data.TotalRecovered %></div>
-
-  <form action="/getCountryResult" method="POST">
+</div>
+  <form action="/getCountryResult" method="POST" id="mainform">
   <input type="text" name="Country" id="Country" placeholder="Country">
     <input type="date" name="Date1" id="Date1">
     <input type="date" name="Date2" id="Date2">
     <button type="submit">Search</button>
 </form>
+  </main>
+  <footer> Farhan Ayyash</footer>
+  
 </body>
 </html>

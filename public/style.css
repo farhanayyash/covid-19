@@ -1,3 +1,73 @@
 body{
+  width: 100%;
+  height: 100%;
   background-color: rgb(163, 197, 197);
+}
+header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: rgb(34, 34, 34);
+}
+header a{
+  color: aliceblue;
+
+  padding: 50px 20px;
+  text-decoration: none;
+}
+header a:hover{
+color: blue;
+}
+main{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 500px;
+}
+#main{
+  position: absolute;
+  margin-top: 75px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+#main div{
+  margin-top: 15px;
+}
+#mainform{
+  margin-top: 200px;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(34, 34, 34);
+  color: aliceblue;
+  height: 60px;
+  padding-top: 40px;
+}
+.card{
+  margin: 15px 20px;
+  padding: 30px;
+  border: 1px solid rgb(51, 51, 51);
+}
+.card button{
+  padding: 5px;
+  margin-top: 10px;
+  border: none;
+  font-weight: bold;
+}
+.card button:hover{
+  margin-top: 10px;
+  border: none;
+  font-weight: bold;
+  background-color: black;
+  color: aliceblue;
 }
