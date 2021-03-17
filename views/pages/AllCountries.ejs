@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+
+  <link rel="stylesheet" href="./style.css">
+
   <title>AllCountries</title>
 </head>
 <body>
@@ -12,9 +16,9 @@
     <a href="/MyRecords">MyRecords</a>
     <a href="#">All Countries</a>
   </header>
-   
+   <main>
   <% data.forEach(element => { %>
-    <div>
+    <div class="card">
       <h1>Country: <%= element.Country %></h1>
       <h1>TotalConfirmed: <%= element.TotalConfirmed %></h1>
       <h1>TotalDeaths: <%= element.TotalDeaths %></h1>
@@ -30,8 +34,9 @@
 
       </form>
     </div>
-    <hr>
   <% }); %>
+</main>
+  <footer> Farhan Ayyash</footer>
 
 </body>
 </html>

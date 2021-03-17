@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./reset.css">
+
+  <link rel="stylesheet" href="./style.css">
+
   <title>MyRecords</title>
 </head>
 <body>
@@ -12,19 +16,22 @@
     <a href="#">MyRecords</a>
     <a href="/AllCountries">All Countries</a>
   </header>
+  <main>
   <% if(data.length == 0 ){ %>
     <h1>NO AVAILABLE RECORDS</h1>
     <% }else{%>
     
   <% data.forEach(element => { %>
-    <div>
+    <div class="card" style="max-height: 120px;">
       <h1>Country: <%= element.country %></h1>
       <h1>Date: <%= element.date %></h1>
       <form action="/RecordDetails/<%= element.card_id %>" method="GET">
         <button type="submit">Details</button>
       </form>
     </div>
-    <hr>
   <% });} %>
+</main>
+  <footer> Farhan Ayyash</footer>
+
 </body>
 </html>

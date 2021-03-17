@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="../reset.css">
+
+  <link rel="stylesheet" href="../style.css">
+
+  <title>RecordDetails</title>
 </head>
 <body>
   <header>
@@ -12,9 +16,9 @@
     <a href="/MyRecords">MyRecords</a>
     <a href="/AllCountries">All Countries</a>
   </header>
-
+  <main>
   <% data.forEach(element => { %>
-    <div>
+    <div class="card" style="max-height: 120px;">
       <h1>Country: <%= element.country %></h1>
       <h1>TotalConfirmed: <%= element.totalconfirmed %></h1>
       <h1>TotalDeaths: <%= element.totaldeaths %></h1>
@@ -24,8 +28,9 @@
         <button type="submit">delete</button>
       </form>
     </div>
-    <hr>
   <% }); %>
-  
+</main>
+<footer> Farhan Ayyash</footer>
+
 </body>
 </html>
