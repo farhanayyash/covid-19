@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="/">Home</a>
+    <a href="/MyRecords">MyRecords</a>
+    <a href="/AllCountries">All Countries</a>
+  </header>
+
+  <% data.forEach(element => { %>
+    <div>
+      <h1>Country: <%= element.country %></h1>
+      <h1>TotalConfirmed: <%= element.totalconfirmed %></h1>
+      <h1>TotalDeaths: <%= element.totaldeaths %></h1>
+      <h1>TotalRecovered: <%= element.totalrecovered %></h1>
+      <h1>Date: <%= element.date %></h1>
+      <form action="/deleteMyRecords/<%= element.card_id %>?_method=DELETE" method="POST">
+        <button type="submit">delete</button>
+      </form>
+    </div>
+    <hr>
+  <% }); %>
+  
+</body>
+</html>
